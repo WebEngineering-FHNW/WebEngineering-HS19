@@ -7,7 +7,7 @@
  Depends on the "validate" function from outside.
 --%>
 
-<%@ page import="static mvc.FieldUtil.*" %>
+<%@ page import="static webec.FieldUtil.*" %>
 
 <div>
   <label for='${name}'>${label}</label>

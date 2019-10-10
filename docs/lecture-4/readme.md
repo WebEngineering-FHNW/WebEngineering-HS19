@@ -18,50 +18,9 @@
 We are using git to walk through the code of InPlaceCalculator
 incl. model, view, controller, tests.
 
-Use `git checkout <branch-name>` to see the respective state of development.
+## Assignments
 
-You can always go back to the youngest state with `git checkout master`.
-
-### Setup git to sync with latest upstream
-
-`git remote add upstream https://github.com/Dierk/WebEngineering-FS19.git`
-
-validate via
-
-`git remote -v`
-
-sync via
-
-`git pull upstream master`
-
-(or uses other branch than `master`)
-
-### Start of work on InPlaceCalculator
-
-	git checkout feature/inplacecalculator
-	
-Have a look at all artifacts in the commit.
-
-### Intermediate step:more generic field error handling
-
-	git checkout feature/genericvalidation	
-
-### Use of _form_row.gsp template for smart, labeled fields	
-
-	git checkout feature/templating
-	
-### Using a taglib for dynamic content
-
-	git checkout feature/taglib
-
-### Grails specific: fully generic error messages plus I18N
-
-	git checkout feature/i18n
-	
-### Using a layout for the form
-
-	git checkout feature/layout
-	
+Find and process todos 1-5.
 
 ## Practical work (may extend into homework)
 
@@ -72,7 +31,6 @@ You best make a copy of each artifact that we used for the InPlaceCalculator
 Just copy the file into the same directory as the original and rename accordingly.
 
 You can reuse the _form_ layout.
-
 You can make use of the following conversion functions:
 
 	double c2f(double c) { c * 1.8d + 32 }
