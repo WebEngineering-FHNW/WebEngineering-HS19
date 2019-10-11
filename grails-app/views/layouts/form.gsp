@@ -12,7 +12,6 @@
   <g:layoutHead/>
 </head>
 <body>
-
   <h1><g:layoutTitle default="Form"/></h1>
 
   <g:layoutBody/>
