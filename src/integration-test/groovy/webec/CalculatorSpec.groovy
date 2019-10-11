@@ -24,7 +24,7 @@ class CalculatorSpec extends GebSpec {
         then: "Result Page is displayed"
             title == "Average"
 //  todo 1: un-comment and make the test run
-//            $("output").text() == "5.5"
+            $("output").text() == "5.5"
 
 
         when: "click on back link"
