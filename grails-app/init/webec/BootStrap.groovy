@@ -1,5 +1,6 @@
 package webec
 
+import grails.web.servlet.context.support.GrailsEnvironment
 import org.codehaus.groovy.runtime.DateGroovyMethods
 
 class BootStrap {
@@ -19,7 +20,7 @@ class BootStrap {
                 new Booking(booker: dierk, room: oben, day: today + i, slot: Booking.AM).save(failOnError:true)
             }
 
-            new Booking(booker: dierk, room: oben, day: today, slot: Booking.AM).save(failOnError:true)
+            new Booking(booker: dieter, room: oben, day: today, slot: Booking.AM).save(failOnError:true)
 
         }
 
