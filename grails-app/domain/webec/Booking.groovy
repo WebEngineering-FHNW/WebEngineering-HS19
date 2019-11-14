@@ -12,6 +12,8 @@ class Booking {
     static String PM2 = "15:15 18:00"
     static List<String> SLOTS = [AM, PM1, PM2]
 
+    String toString() { "$booker.lastName booked room $room.name at $day, slot $slot"}
+
     static constraints = {
         slot inList: Booking.SLOTS
     }

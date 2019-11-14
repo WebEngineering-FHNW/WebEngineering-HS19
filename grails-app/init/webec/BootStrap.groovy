@@ -1,10 +1,15 @@
 package webec
 
+import grails.util.Environment
 import org.codehaus.groovy.runtime.DateGroovyMethods
 
 class BootStrap {
 
     def init = { servletContext ->
+
+        if(Environment.current != Environment.DEVELOPMENT) { // guard clause
+            return ;
+        }
 
         Person dierk  = new Person(firstName: "Dierk", lastName: "König").save(failOnError:true)
         Person dieter = new Person(firstName: "Dieter", lastName: "Holz").save(failOnError:true)
@@ -19,7 +24,7 @@ class BootStrap {
                 new Booking(booker: dierk, room: oben, day: today + i, slot: Booking.AM).save(failOnError:true)
             }
 
-            new Booking(booker: dierk, room: oben, day: today, slot: Booking.AM).save(failOnError:true)
+            new Booking(booker: dieter, room: oben, day: today, slot: Booking.AM).save(failOnError:true)
 
         }
 
