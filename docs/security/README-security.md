@@ -14,7 +14,7 @@ Knowing the very basics of role-based security for web applications, incl.
 
 ## Ressources
 
-http://grails-plugins.github.io/grails-spring-security-core/3.2.x/index.html
+http://grails-plugins.github.io/grails-spring-security-core/4.0.x/index.html
 
 Steps to follow:
 https://github.com/Dierk/WebEngineering-HS18/commits/dk_security
