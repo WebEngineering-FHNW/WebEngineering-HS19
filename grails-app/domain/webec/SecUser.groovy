@@ -13,6 +13,7 @@ class SecUser implements Serializable {
 
     String username
     String password
+    Person person
     boolean enabled = true
     boolean accountExpired
     boolean accountLocked

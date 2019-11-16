@@ -4,17 +4,19 @@
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'webec.SecUser'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'webec.SecUserSecRole'
 grails.plugin.springsecurity.authority.className = 'webec.SecRole'
+
+grails.plugin.springsecurity.logout.postOnly = false
+
+// go for an optimistic approach: all is allowed except when restricted in the staticRules
+grails.plugin.springsecurity.rejectIfNoRule = false
+grails.plugin.springsecurity.fii.rejectPublicInvocations = false
+
+
+//grails.plugin.springsecurity.securityConfigType = "Annotation" // or "InterceptUrlMap"
+
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
-	[pattern: '/',               access: ['permitAll']],
-	[pattern: '/error',          access: ['permitAll']],
-	[pattern: '/index',          access: ['permitAll']],
-	[pattern: '/index.gsp',      access: ['permitAll']],
-	[pattern: '/shutdown',       access: ['permitAll']],
-	[pattern: '/assets/**',      access: ['permitAll']],
-	[pattern: '/**/js/**',       access: ['permitAll']],
-	[pattern: '/**/css/**',      access: ['permitAll']],
-	[pattern: '/**/images/**',   access: ['permitAll']],
-	[pattern: '/**/favicon.ico', access: ['permitAll']]
+	[pattern: '/booking/*',      access: ['ROLE_USER']],
+    // you might want to add more lines here ...
 ]
 
 grails.plugin.springsecurity.filterChain.chainMap = [
