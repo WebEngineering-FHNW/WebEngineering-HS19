@@ -1,6 +1,9 @@
 package webec
 
-class MyBookingController {
+//import grails.plugin.springsecurity.annotation.Secured
+
+//@Secured('ROLE_USER') // when using annotations
+class BookingController {
 
     def probiere() {
         // find the last names of all people that booked
@@ -9,5 +12,6 @@ class MyBookingController {
         def result = Booking.findAllByBooker(booker)*.room
         respond result
     }
+
     static scaffold = Booking
 }

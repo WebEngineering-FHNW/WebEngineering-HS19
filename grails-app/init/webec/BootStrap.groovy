@@ -5,6 +5,8 @@ import org.codehaus.groovy.runtime.DateGroovyMethods
 
 class BootStrap {
 
+    SecService secService; // injected, use a service to enforce transaction handling
+
     def init = { servletContext ->
 
         if(Environment.current != Environment.DEVELOPMENT) { // guard clause
@@ -27,6 +29,15 @@ class BootStrap {
             new Booking(booker: dieter, room: oben, day: today, slot: Booking.AM).save(failOnError:true)
 
         }
+
+        SecRole adminRole = new SecRole(authority: 'ROLE_ADMIN').save(failOnError: true);
+        SecRole userRole  = new SecRole(authority: 'ROLE_USER').save(failOnError: true);
+
+        SecUser secDieter = new SecUser(username:'xx', password: 'xx', person: dieter).save(failOnError: true);
+
+        secService.create(secDieter, userRole);
+
+        println "*** security user-roles: " + SecUserSecRole.count()
 
     }
     def destroy = {
