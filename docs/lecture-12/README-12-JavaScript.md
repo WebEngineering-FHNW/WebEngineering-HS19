@@ -1,4 +1,4 @@
-# WebEngineering Module, Server Pages
+# WebEngineering Module, JavaScript
 
 ## Goals
 
