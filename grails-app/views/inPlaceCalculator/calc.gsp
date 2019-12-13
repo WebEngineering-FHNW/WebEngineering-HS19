@@ -4,17 +4,17 @@
     <title>
         In-Place Calculator
     </title>
-%{--    todo: 3 add on-page validation--}%
-%{--    <script>--}%
-%{--        function validate(field) {--}%
-%{--            if( Number(field.value) < 1.0) {--}%
-%{--                field.classList.add("error");--}%
-%{--                field.focus();--}%
-%{--            } else {--}%
-%{--                field.classList.remove("error");--}%
-%{--            }--}%
-%{--        }--}%
-%{--    </script>--}%
+
+    <script>
+        function validate(field) {
+            if( Number(field.value) < 1.0) {
+                field.classList.add("error");
+                field.focus();
+            } else {
+                field.classList.remove("error");
+            }
+        }
+    </script>
 </head>
 
 <body>
